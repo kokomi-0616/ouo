@@ -1,1 +1,69 @@
 index
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+            font-size: 30px;
+            color:rgb(0, 0, 0);
+            font-family: "DFKai-SB", serif;
+            
+            }
+            p1{
+            text-align: center;
+            font-size: 30px;
+            color:rgb(146, 166, 223);
+            font-family: "DFKai-SB", serif;
+            
+            }
+            select{
+            font-size: 20px;
+            font-family: "DFKai-SB", serif;
+            }
+
+            body{
+            background-image: url("https://as1.ftcdn.net/v2/jpg/06/01/03/48/1000_F_601034886_NoDX4AVrUr6BnUU3yJeWVHJoYPaZBkxZ.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+        </style>
+        <title>game</title>
+        <img src=https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2025/02/08/5f834f2d2f59353d326b5e9b0cfa8a62_4851369671043769453.png?x-oss-processimage%2Fformat%2Cwebp width="200" height="200">
+    </head>
+    <body>
+          <p style="text-align: center;">
+            秘密基地
+          </p>
+          <div style="text-align: center;">
+            <select id="urlSelect1">
+                <option value="">小遊戲</option>
+                <option value="option1" data-url="#">1</option>
+                <option value="option2" data-url="#">2</option>
+                <option value="option3" data-url="#">3</option>
+            </select>
+            <select id="urlSelect2">
+                <option value="">遊戲</option>
+                <option value="option1" data-url="#">1</option>
+                <option value="option2" data-url="#">2</option>
+                <option value="option3" data-url="#">3</option>
+            </select>
+        </div>
+        
+        <script>
+            document.getElementById("urlSelect1").addEventListener("change", function() {
+                var selectedUrl = this.options[this.selectedIndex].getAttribute("data-url");
+                if (selectedUrl) {
+                    window.location.href = selectedUrl;
+                }
+            });
+        
+            document.getElementById("urlSelect2").addEventListener("change", function() {
+                var selectedUrl = this.options[this.selectedIndex].getAttribute("data-url");
+                if (selectedUrl) {
+                    window.location.href = selectedUrl;
+                }
+            });
+        </script>
+
+    </body>
+</html>
